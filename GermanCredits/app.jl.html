@@ -1,0 +1,58 @@
+<header class="st-header q-pa-sm">
+    <h1 class="st-header__title text-h3">German Credits</h1>
+</header>
+<div class="row">
+    <div class="col col-12 col-sm st-module">
+        <p id="ixy5y" draggable="true">
+        <div id="i89kt"><b id="iqnz8" draggable="true">No. of good credits</b></div>
+        </p>
+        <p id="ikl74" draggable="true" class="bignumber">Default content
+        </p>
+    </div>
+    <div class="col col-12 col-sm st-module">
+        <p draggable="true">
+        <div id="iw6qm"><b draggable="true">No. of bad credits</b></div>
+        </p>
+        <p draggable="true" class="bignumber">Default content
+        </p>
+    </div>
+    <div class="col col-12 col-sm st-module">
+        <p draggable="true">
+        <div id="ix079"><b draggable="true">Bad credits €</b></div>
+        </p>
+        <p draggable="true" class="bignumber">Default content
+        </p>
+    </div>
+    <div class="col col-12 col-sm st-module">
+        <p id="ik06h" draggable="true">
+        <div id="i88bv"><b>Good credits €</b></div>
+        </p>
+        <p id="imikz" draggable="true" class="bignumber">Default content
+        </p>
+    </div>
+</div>
+<div class="row">
+    <div class="col col-12 col-sm">
+        <p><b>Age interval filter</b></p>
+        <q-separator id="iyje6"></q-separator>
+    </div>
+</div>
+<div class="row">
+    <div class="col col-12 col-sm st-module">
+        <p><b>Credits by age</b></p>
+        <plotly :data="[{
+      x: ['giraffes', 'orangutans', 'monkeys'],
+      y: [20, 14, 23],
+      type: 'bar'
+    }]"></plotly>
+    </div>
+    <div class="col col-12 col-sm st-module">
+        <p><b>Age vs. credit amount</b></p>
+        <plotly :data="[{
+      x: [1, 2, 3, 4],
+      y: [10, 15, 13, 17],
+      mode: 'markers',
+      type: 'scatter'
+    }]"></plotly>
+    </div>
+</div>
