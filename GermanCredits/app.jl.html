@@ -1,0 +1,43 @@
+<header class=" st-header q-pa-sm">
+    <h1 class="st-header__title text-h3">German Credits by Age</h1>
+ </header>
+ ", "
+ <div class="row">
+    <div class="col col-12 col-sm st-module">
+       <div class="row">
+          <div class="col col-12 col-sm st-br">
+             <st-big-number color="negative" :number="bad_credits_count" icon="format_list_numbered" title="Bad credits"></st-big-number>
+          </div>
+          <div class="col col-12 col-sm st-br">
+             <st-big-number color="positive" :number="good_credits_count" icon="format_list_numbered" title="Good credits"></st-big-number>
+          </div>
+          <div class="col col-12 col-sm st-br"><st-big-number color="negative" :number="bad_credits_amount | numberformat" icon="euro_symbol" title="Bad credits total amount"></st-big-number></div>
+          <div class="col col-12 col-sm st-br"><st-big-number color="positive" :number="good_credits_amount | numberformat" icon="euro_symbol" title="Good credits total amount"></st-big-number></div>
+       </div>
+    </div>
+ </div>
+ ", "
+ <div class="row">
+    <div class="col col-12 col-sm">
+       <h4>Age interval filter</h4>
+       <q-range :min=18 v-model="age_range" label :max=90 label-always :left-label-value="'Min age: ' + age_range.min" :step=1 :right-label-value="'Max age: ' + age_range.max"></q-range>
+    </div>
+ </div>
+ ", "
+ <div class="row">
+    <div class="col col-12 col-sm st-module">
+       <h4>Credits data</h4>
+       <q-table style="height: 400px;" :columns="credit_data.columns_credit_data" v-model="credit_data" :data="credit_data.data_credit_data" row-key="__id" :pagination.sync="credit_data_pagination"></q-table>
+    </div>
+    <div class="col col-12 col-sm st-module">
+       <h4>Credits by age</h4>
+       <plotly :data="good_bad_plot" :layout="good_bad_plot_layout" :responsive="typeof { displayLogo:false }.responsive == 'undefined' ? true : { displayLogo:false }.responsive" :editable="typeof { displayLogo:false }.editable == 'undefined' ? false : { displayLogo:false }.editable" :scroll-zoom="typeof { displayLogo:false }.scrollzoom == 'undefined' ? false : { displayLogo:false }.scrollzoom" :static-plot="typeof { displayLogo:false }.staticplot == 'undefined' ? false : { displayLogo:false }.staticplot" :display-mode-bar="typeof { displayLogo:false }.displaymodebar == 'undefined' ? true : { displayLogo:false }.displaymodebar" :displaylogo="typeof { displayLogo:false }.displaylogo == 'undefined' ? '' : { displayLogo:false }.displaylogo" :to-image-button-options="typeof { displayLogo:false }.toImageButtonOptions == 'undefined' ? {'filename':'newplot','height':500,'format':'png','scale':1,'width':700} : { displayLogo:false }.toImageButtonOptions"></plotly>
+    </div>
+ </div>
+ ", "
+ <div class="row">
+    <div class="col col-12 col-sm st-module">
+       <h4>Credits by age, amount and duration</h4>
+       <plotly :data="age_amount_plot" :layout="age_amount_plot_layout" :displaylogo="false"></plotly>
+    </div>
+ </div>
