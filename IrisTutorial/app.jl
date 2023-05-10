@@ -34,5 +34,6 @@ end
 end
 
 
-@page("/", "app.jl.html")
-
+meta = Dict("og:title" => "Iris Clustering", "og:description" => "Dashboard to analyze k-means clustering results for the Iris dataset.", "og:image" => "/preview.png")
+layout = DEFAULT_LAYOUT(meta=meta)
+@page("/", "app.jl.html", layout)

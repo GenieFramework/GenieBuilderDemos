@@ -66,7 +66,9 @@ const data = CSV.File("german_credits.csv") |> DataFrame
     end
 end
 
-@page("/", "app.jl.html")
+meta = Dict("og:title" => "German Credits", "og:description" => "Dashboard with statistics for the German Credits dfataset.", "og:image" => "/preview.png")
+layout = DEFAULT_LAYOUT(meta=meta)
+@page("/", "app.jl.html", layout)
 # @page("/", "ui_lowcode.jl")
 
 
