@@ -125,5 +125,4 @@ end
 meta = Dict("og:title" => "Lorenz Chaotic Attractor", "og:description" => "Real-time simulation of a dynamic system with constant UI refresh.", "og:image" => "/preview.jpg")
 layout = DEFAULT_LAYOUT(meta=meta)
 @page("/", "app.jl.html", layout)
-Server.isrunning() || Server.up()
 end
