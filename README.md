@@ -1,8 +1,7 @@
-# GenieBuilderDemos
 
-This repository contains the code for the Genie Builder demos. For step-by-step tutorials, check out the [Genie Framework Blog](https://genieframework.com/blog/index.html).
+This repository contains apps ready to be deployed on [Genie Cloud](geniecloud.io), or loaded into [Genie Builder](https://marketplace.visualstudio.com/items?itemName=GenieBuilder.geniebuilder). For step-by-step tutorials, check out the [tutorials page](https://learn.geniecloud.io/tutorials).
 
-To run the demos, install the Genie Builder VSCode plugin and copy the contents of this repository into `~/.julia/geniebuilder/`.
+To run the demos, sign up for a Genie Cloud account and follow [this guide](https://learn.geniecloud.io/guides/importing-genie-apps#bootstrapping-your-account-with-the-demos-repository). These steps are also valid for Genie Builder.
 
 ## Boostrapping your Genie Cloud account / Genie Builder
 
